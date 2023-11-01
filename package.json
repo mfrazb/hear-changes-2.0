@@ -1,0 +1,31 @@
+{
+  "name": "hear-changes-2.0",
+  "version": "1.0.0",
+  "description": "",
+  "source": "./client/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build",
+    "build-launch": "npx parcel",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.10.1",
+    "@types/react": "^18.2.33",
+    "@types/react-dom": "^18.2.14",
+    "@typescript-eslint/eslint-plugin": "^6.9.1",
+    "@typescript-eslint/parser": "^6.9.1",
+    "eslint": "^8.52.0",
+    "eslint-plugin-react": "^7.33.2",
+    "parcel": "^2.10.1",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "browser-or-node": "^2.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
