@@ -3,14 +3,19 @@
   "version": "1.0.0",
   "description": "",
   "source": "./client/index.html",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "start": "parcel",
     "build": "parcel build",
     "build-launch": "npx parcel",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "check": "tsc --noEmit",
+    "lint": "eslint",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ci": "yarn build && yarn test && yarn lint && yarn check"
   },
   "keywords": [],
-  "author": "",
+  "author": "Meredith Frazier Britt",
   "license": "ISC",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.10.1",
@@ -21,11 +26,13 @@
     "eslint": "^8.52.0",
     "eslint-plugin-react": "^7.33.2",
     "parcel": "^2.10.1",
-    "process": "^0.11.10"
+    "process": "^0.11.10",
+    "typescript": "^5.2.2"
   },
   "dependencies": {
     "browser-or-node": "^2.1.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.18.0"
   }
 }
