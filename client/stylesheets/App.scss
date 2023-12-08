@@ -1,3 +1,77 @@
-#app {
-  background-color: red;
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Signika+Negative:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --main-clr: rgba(138, 199, 219);
+  --main-clr-lt: rgba(138, 199, 219, 0.7);
+  --main-clr-shade1: rgb(255, 255, 255, 0.3);
+  --main-clr-shade2: rgb(255, 255, 255, 0.6);
+
+  --serif-font: 'Bitter', serif;
+  --ss-font: 'Signika Negative', sans-serif;
+  --font-clr: rgb(61, 62, 64);
+  --font-clr-shade1: rgba(61, 62, 64, 0.5);
+  --font-lt: 300;
+  --font-md: 400;
+  --font-bold: 600;
+  --header-font-size: 2rem;
+  --sm-header-font-size: 1.5rem;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 350, 'GRAD' 0, 'opsz' 24;
+}
+
+button,
+input,
+select,
+textarea {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--ss-font);
+  color: var(--font-clr);
+  font-size: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: normal;
+  font-family: var(--serif-font);
+}
+
+body {
+  background-color: var(--main-clr-lt);
+  color: var(--font-clr);
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 860px) {
+  #header-container {
+    flex-direction: column;
+  }
+  .day.short-text {
+    display: inline-block;
+  }
+  .day.full-text {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .date {
+    min-height: 2ch;
+  }
+  .day.abbr-text {
+    display: inline-block;
+  }
+  .day.short-text {
+    display: none;
+  }
 }

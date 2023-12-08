@@ -1,0 +1,61 @@
+@import './App.scss';
+
+h2 {
+  text-align: right;
+}
+
+#home-container {
+  padding: 1rem 0rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+#calendar-container,
+#events-container {
+  border-radius: 25px;
+  background-color: var(--main-clr-shade1);
+  padding: 0rem 1rem 1rem;
+}
+
+#calendar-container {
+  //   width: 60%;
+}
+
+#calendar-dates {
+  display: grid;
+  grid-template-columns: 0.5fr repeat(7, 1fr);
+  gap: 0.5rem;
+}
+
+.day,
+.date,
+.event {
+  padding: 0.5em;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255, 0.3);
+  font-family: var(--serif-font);
+  font-size: 1rem;
+}
+
+.day {
+  text-align: center;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+
+.day.res {
+  opacity: 0;
+}
+
+.day.short-text {
+  display: none;
+}
+
+.day.abbr-text {
+  display: none;
+}
+
+#events-container {
+  flex: 1;
+}
