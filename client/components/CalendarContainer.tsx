@@ -1,13 +1,24 @@
 import './../stylesheets/CalendarContainer.scss';
 import DateContainer from './DateContainer';
 import startOfToday from 'date-fns/startOfToday';
-import { addDays, endOfMonth } from 'date-fns';
+import { addDays, endOfMonth, getDay } from 'date-fns';
 import eachDayOfInterval from 'date-fns/eachDayOfInterval';
+
+function findFirstDate(selectedDate: Date) {
+  // if the first day of the month for the selected date is 0, return first day of month for selected date 
+  // if first day of month for selected date is not 0, subtract first day +1 from # of days in last month
+  // this determines start date for entire calendar 
+  return getDay(selectedDate);
+}
 
 const CalendarContainer = () => {
   const today = startOfToday();
   const lastDay = endOfMonth(addDays(today, 365));
 
+  // include any trailing days from the previous month if the curr month does not start on a Sunday
+  console.log(findFirstDate(today));
+
+  // determine the first date to include in the calendar based on the day of the week of the calendar based on
   const allDates = eachDayOfInterval({
     start: new Date(today),
     end: new Date(lastDay),
@@ -48,7 +59,8 @@ const CalendarContainer = () => {
         <div className='day full-text'>Saturday</div>
         <div className='day short-text'>Sat</div>
         <div className='day abbr-text'>S</div>
-        <div>{dates}</div>
+        <div className='month'>MONTH PLACEHOLDER</div>
+        {dates}
       </div>
     </div>
   );

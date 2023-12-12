@@ -18,11 +18,8 @@ h2 {
   padding: 0rem 1rem 1rem;
 }
 
-#calendar-container {
-  //   width: 60%;
-}
-
 #calendar-dates {
+  background-color: green;
   display: grid;
   grid-template-columns: 0.5fr repeat(7, 1fr);
   gap: 0.5rem;
@@ -40,8 +37,8 @@ h2 {
 
 .day {
   text-align: center;
-  grid-row-start: 2;
-  grid-row-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 1;
 }
 
 .day.res {
