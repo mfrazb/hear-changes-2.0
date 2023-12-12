@@ -18,8 +18,11 @@ h2 {
   padding: 0rem 1rem 1rem;
 }
 
+#calendar-container {
+  width: 65%;
+}
+
 #calendar-dates {
-  background-color: green;
   display: grid;
   grid-template-columns: 0.5fr repeat(7, 1fr);
   gap: 0.5rem;
@@ -27,7 +30,8 @@ h2 {
 
 .day,
 .date,
-.event {
+.event,
+.month {
   padding: 0.5em;
   border-radius: 10px;
   background-color: rgb(255, 255, 255, 0.3);
@@ -51,6 +55,14 @@ h2 {
 
 .day.abbr-text {
   display: none;
+}
+
+.month {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #events-container {
