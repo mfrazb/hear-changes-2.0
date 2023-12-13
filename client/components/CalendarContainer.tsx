@@ -1,5 +1,5 @@
-import './../stylesheets/CalendarContainer.scss';
 import DateContainer from './DateContainer';
+import { setDateBackgroundColor } from './../helpers/styles.helpers';
 import startOfToday from 'date-fns/startOfToday';
 import {
   addDays,
@@ -71,7 +71,6 @@ const CalendarContainer = () => {
   });
 
   const dates = allDates.map((date, index) => {
-    // TODO: add style attribute that includes background color dynamically chosen based on month
     return (
       <DateContainer
         id={`${date}`}
@@ -85,6 +84,7 @@ const CalendarContainer = () => {
   const monthGridPositions = getMonthGridRows(allMonths);
 
   const months = allMonths.map((month, index) => {
+    console.log(month);
     return (
       <h2
         id={`${month.toLocaleString('default', { month: 'short' })}-${getYear(
@@ -93,6 +93,7 @@ const CalendarContainer = () => {
         className='month'
         style={{
           gridRow: `${monthGridPositions[index][0]} / ${monthGridPositions[index][1]}`,
+          backgroundColor: `${setDateBackgroundColor(month, today)}`,
         }}
         key={`${month}-${index}`}>
         {month.toLocaleString('default', { month: 'long' })}

@@ -39,6 +39,18 @@ h1 {
   font-family: var(--serif-font);
 }
 
+.date {
+  height: 9ch;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5em;
+}
+
+.date p {
+  text-align: right;
+}
+
 .day {
   text-align: center;
   grid-row-start: 1;

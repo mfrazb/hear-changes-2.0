@@ -1,5 +1,3 @@
-// UPDATE STYLESHEET
-import './../stylesheets/DateContainer.scss';
 import format from 'date-fns/format';
 import { getDay, getDate, getMonth, isSameMonth } from 'date-fns';
 import { setDateBackgroundColor } from './../helpers/styles.helpers';
@@ -15,6 +13,7 @@ const DateContainer = props => {
         backgroundColor: `${setDateBackgroundColor(date, today)}`,
       }}>
       <p>{getDate(props.date)}</p>
+      <div>Day's Events Here</div>
     </div>
   );
 };
