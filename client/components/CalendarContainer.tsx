@@ -41,9 +41,9 @@ function getMonthGridRows(arr) {
     const increment = getDaysInMonth(month) - (7 - firstDay + (lastDay + 1));
 
     const firstRow = rowCount;
-    if (firstDay < 3 || index === 0) rowCount++;
+    if (firstDay <= 3 || index === 0) rowCount += 1;
     rowCount += increment / 7;
-    if (lastDay >= 3) rowCount++;
+    if (lastDay >= 3 || index === arr.length - 1) rowCount += 1;
     const lastRow = rowCount;
 
     return [firstRow, lastRow];
@@ -57,7 +57,7 @@ const CalendarContainer = () => {
 
   // start date - include all dates for current mo and trailing dates for prev mo
   const startDate = findFirstDate(today);
-  // end date is one year from today
+  // end date - last day of month for current date one year from today
   const endDate = endOfMonth(addDays(today, 365));
 
   const allDates = eachDayOfInterval({
@@ -71,29 +71,38 @@ const CalendarContainer = () => {
   });
 
   const dates = allDates.map((date, index) => {
-    return <DateContainer id={`${date}`} key={`date-${index}`} date={date} />;
+    // TODO: add style attribute that includes background color dynamically chosen based on month
+    return (
+      <DateContainer
+        id={`${date}`}
+        date={date}
+        today={today}
+        key={`date-${index}`}
+      />
+    );
   });
 
   const monthGridPositions = getMonthGridRows(allMonths);
 
   const months = allMonths.map((month, index) => {
-    const monthName = month.toLocaleString('default', { month: 'long' });
     return (
-      <div
-        id={`${monthName} ${getYear(month)}`}
+      <h2
+        id={`${month.toLocaleString('default', { month: 'short' })}-${getYear(
+          month,
+        )}`}
         className='month'
         style={{
           gridRow: `${monthGridPositions[index][0]} / ${monthGridPositions[index][1]}`,
         }}
         key={`${month}-${index}`}>
-        {monthName}
-      </div>
+        {month.toLocaleString('default', { month: 'long' })}
+      </h2>
     );
   });
 
   return (
     <div id='calendar-container'>
-      <h2 id='calendar-year'>2023</h2>
+      <h1 id='calendar-year'>2023</h1>
       {/*
       FORM FOR USER TO CHANGE YEAR
       <form id='user-yr' action='#' className='header2 year'>
