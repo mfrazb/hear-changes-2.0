@@ -1,5 +1,5 @@
 import DateContainer from './DateContainer';
-import { setDateBackgroundColor } from './../helpers/styles.helpers';
+import { setDateBackgroundColor } from '../../helpers/styles.helpers';
 import startOfToday from 'date-fns/startOfToday';
 import {
   addDays,
@@ -84,7 +84,6 @@ const CalendarContainer = () => {
   const monthGridPositions = getMonthGridRows(allMonths);
 
   const months = allMonths.map((month, index) => {
-    console.log(month);
     return (
       <h2
         id={`${month.toLocaleString('default', { month: 'short' })}-${getYear(

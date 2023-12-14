@@ -1,6 +1,6 @@
 import format from 'date-fns/format';
 import { getDay, getDate, getMonth, isSameMonth } from 'date-fns';
-import { setDateBackgroundColor } from './../helpers/styles.helpers';
+import { setDateBackgroundColor } from '../../helpers/styles.helpers';
 
 const DateContainer = props => {
   const { date, id, today } = props;

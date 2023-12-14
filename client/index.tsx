@@ -1,6 +1,6 @@
 import { createRoot } from 'react-dom/client';
 import React from 'react';
-import App from './App';
+import App from './App/App';
 
 // with TS, check if root element exists before rendering
 const rootElement = document.getElementById('root');

@@ -1,5 +1,5 @@
 import React from 'react';
-import './stylesheets/App.scss';
+import './App.scss';
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -7,10 +7,10 @@ import {
   RouterProvider,
 } from 'react-router-dom';
 
-import Layout from './pages/Layout';
-import Home from './pages/Home';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
+import Layout from '../pages/Layout/Layout';
+import Home from '../pages/Home/Home';
+import Login from '../pages/Login';
+import Signup from '../pages/Signup';
 
 const router = createBrowserRouter(
   createRoutesFromElements(

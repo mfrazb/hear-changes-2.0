@@ -1,4 +1,4 @@
-@import './App.scss';
+@import './../../App/App.scss';
 
 #app-container {
   max-width: 1440px;
@@ -13,7 +13,6 @@
   padding: 1rem;
   font-family: var(--serif-font);
   color: var(--font-clr);
-  border-bottom: solid var(--font-clr-shade1) 1px;
 }
 
 #home-header {

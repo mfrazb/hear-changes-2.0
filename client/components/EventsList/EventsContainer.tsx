@@ -1,4 +1,4 @@
-import './../stylesheets/EventsContainer.scss';
+import './EventsContainer.scss';
 
 const EventsContainer = () => {
   return (
