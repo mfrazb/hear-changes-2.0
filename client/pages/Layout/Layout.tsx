@@ -1,9 +1,9 @@
-import './../stylesheets/Layout.scss';
+import './Layout.scss';
 import { useState } from 'react';
-import useWindowListener from './../hooks/useWindowListener.js';
+import useWindowListener from '../../hooks/useWindowListener.js';
 import { Outlet, NavLink } from 'react-router-dom';
-import hcLogoRays from './../assets/bullhorn-bw-200x200px.png';
-import hcLogo from './../assets/bullhorn-bw-100px-no-rays.png';
+import hcLogoRays from './../../assets/bullhorn-bw-200x200px.png';
+import hcLogo from './../../assets/bullhorn-bw-100px-no-rays.png';
 
 const Layout = () => {
   // STATE
