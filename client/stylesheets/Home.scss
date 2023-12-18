@@ -1,7 +1,8 @@
 @import './App.scss';
 
-h2 {
+h1 {
   text-align: right;
+  padding: 0.5em;
 }
 
 #home-container {
@@ -19,7 +20,7 @@ h2 {
 }
 
 #calendar-container {
-  //   width: 60%;
+  width: 65%;
 }
 
 #calendar-dates {
@@ -30,18 +31,30 @@ h2 {
 
 .day,
 .date,
-.event {
+.event,
+.month {
   padding: 0.5em;
   border-radius: 10px;
   background-color: rgb(255, 255, 255, 0.3);
   font-family: var(--serif-font);
-  font-size: 1rem;
+}
+
+.date {
+  height: 9ch;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5em;
+}
+
+.date p {
+  text-align: right;
 }
 
 .day {
   text-align: center;
-  grid-row-start: 2;
-  grid-row-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 1;
 }
 
 .day.res {
@@ -54,6 +67,14 @@ h2 {
 
 .day.abbr-text {
   display: none;
+}
+
+.month {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #events-container {

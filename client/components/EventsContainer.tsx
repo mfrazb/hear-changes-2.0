@@ -3,7 +3,7 @@ import './../stylesheets/EventsContainer.scss';
 const EventsContainer = () => {
   return (
     <div id='events-container'>
-      <h2 id='events-header'>Events</h2>
+      <h1 id='events-header'>Events</h1>
       <div id='events'></div>
     </div>
   );
