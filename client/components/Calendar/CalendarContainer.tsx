@@ -1,5 +1,5 @@
 import DateContainer from './DateContainer';
-import { setDateBackgroundColor } from '../../helpers/styles.helpers';
+import { setDateBackgroundColor } from './../../helpers/styles.helpers.js';
 import startOfToday from 'date-fns/startOfToday';
 import {
   addDays,
