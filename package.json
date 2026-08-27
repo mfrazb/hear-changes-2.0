@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "source": "./client/index.html",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "x-temporary-note": "Temporary Parcel compatibility alias for react-router/dom; remove when Parcel resolves this export natively.",
+  "alias": {
+    "react-router/dom": "./node_modules/react-router/dist/development/dom-export.mjs"
+  },
   "scripts": {
     "start": "parcel",
     "build": "parcel build",
@@ -19,13 +21,14 @@
   "license": "ISC",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.16.4",
+    "@parcel/transformer-typescript-types": "^2.16.4",
     "@types/react": "^18.2.33",
     "@types/react-dom": "^18.2.14",
     "@typescript-eslint/eslint-plugin": "^8.67.0",
-    "@typescript-eslint/parser": "^6.9.1",
+    "@typescript-eslint/parser": "^8.67.0",
     "eslint": "^8.52.0",
     "eslint-plugin-react": "^7.33.2",
-    "parcel": "^2.10.3",
+    "parcel": "^2.16.4",
     "process": "^0.11.10",
     "typescript": "^5.2.2"
   },
@@ -35,7 +38,7 @@
     "date-fns": "^4.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.18.0",
+    "react-router-dom": "^7.18.2",
     "tailwindcss": "^3.3.5"
   }
 }
