@@ -23,7 +23,7 @@
     "@parcel/transformer-sass": "^2.16.4",
     "@parcel/transformer-typescript-types": "^2.16.4",
     "@types/react": "^19.2.18",
-    "@types/react-dom": "^18.2.14",
+    "@types/react-dom": "^19.2.5",
     "@typescript-eslint/eslint-plugin": "^8.67.0",
     "@typescript-eslint/parser": "^8.67.0",
     "eslint": "^10.9.0",
@@ -37,7 +37,7 @@
     "browser-or-node": "^2.1.1",
     "date-fns": "^4.4.0",
     "react": "^19.2.8",
-    "react-dom": "^18.2.0",
+    "react-dom": "^19.2.8",
     "react-router-dom": "^7.18.2",
     "tailwindcss": "^4.3.3"
   }
