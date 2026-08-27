@@ -26,14 +26,13 @@
     "@types/react-dom": "^19.2.5",
     "@typescript-eslint/eslint-plugin": "^8.67.0",
     "@typescript-eslint/parser": "^8.67.0",
-    "eslint": "^10.9.0",
-    "eslint-plugin-react": "^7.33.2",
+    "eslint": "^9.39.5",
+    "eslint-plugin-react": "^7.37.5",
     "parcel": "^2.16.4",
     "process": "^0.11.10",
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "@mui/base": "^5.0.0-beta.23",
     "browser-or-node": "^2.1.1",
     "date-fns": "^4.4.0",
     "react": "^19.2.8",
