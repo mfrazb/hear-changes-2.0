@@ -24,7 +24,7 @@
     "@parcel/transformer-typescript-types": "^2.16.4",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.5",
-    "@typescript-eslint/eslint-plugin": "^8.67.0",
+    "@typescript-eslint/eslint-plugin": "^8.68.0",
     "@typescript-eslint/parser": "^8.67.0",
     "eslint": "^9.39.5",
     "eslint-plugin-react": "^7.37.5",
