@@ -30,7 +30,7 @@
     "eslint-plugin-react": "^7.37.5",
     "parcel": "^2.16.4",
     "process": "^0.11.10",
-    "typescript": "^5.2.2"
+    "typescript": "^7.0.2"
   },
   "dependencies": {
     "browser-or-node": "^2.1.1",
